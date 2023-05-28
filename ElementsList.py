@@ -22,12 +22,28 @@ Error
 
 """
 
+
 indexCheck = int(input())
 frameworks=["Django", "Flask", "CherryPy", "Bottle", "Web2Py", "TurboGears"]
 
-if frameworks[indexCheck] > 0 and < 6:
+try:
+	print(frameworks[indexCheck])
+except IndexError:
+	print("Error")
+
+
+"""
+if indexCheck >= 6:
+    indexCheck = str("Error")
+    print (indexCheck)
+else:   
+    print (frameworks[indexCheck])
+"""
+
+"""
+if indexCheck > 0 and indexCheck < 6:
 	print(frameworks[indexCheck])
 else:
-	print(Error)
-
+	print("Error")
+"""
 
