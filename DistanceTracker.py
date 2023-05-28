@@ -23,16 +23,16 @@ Distance: 197.33 miles
 """
 
 #Employee A: 15.62 miles
-employeeA = round(float(input()))
-employeeA = employeeA * 15.62
+employeeA = float(input())
+employeeA = round(employeeA * 15.62,2)
 
 #Employee B: 41.85 miles
-employeeB = round(float(input()))
-employeeB = employeeB * 41.85
+employeeB = float(input())
+employeeB = round(employeeB * 41.85,2)
 
 #Employee C: 32.67 miles
-employeeC = round(float(input()))
-employeeC = employeeC * 32.67
+employeeC = float(input())
+employeeC = round(employeeC * 32.67,2)
 
 #solution accepts three integer inputs representing the number of times an employee travels to the job site
 totalDistance = employeeA + employeeB + employeeC
