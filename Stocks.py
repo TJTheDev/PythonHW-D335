@@ -20,10 +20,25 @@ Total price: $150.53
 
 stocks = {'TSLA': 912.86 , 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8.72, 'AURA': 22.12, 'AMZN': 141.28, 'EMBK': 12.29, 'LVLU': 2.33}
 
-sharePurchase = int(input())
+amountOfShares = int(input())
+loopCheck = amountOfShares
+finalCal = 0.00
+sharePrice = 0.00
 
-portfolio = sharePurchase / stocks[sharePurchase]
-
-
-
-print("Total price:" + ": $", portfolio)
+while loopCheck > 0:
+#    stockChoice = str(input())
+#   I switched this to a try block to handle input validation better
+    try:
+        stockChoice = str(input())
+        finalCal = round(finalCal + stocks[stockChoice],2) 
+#       stockChoice = "'"+stockChoice+"'"
+#       print(stockChoice)
+#       print (stocks[stockChoice])
+#       finalCal = finalCal + int(stocks[stockChoice])
+#       sharePrice = int(stocks[stockChoice])
+#       round(finalCal = finalCal + stocks[stockChoice],2)
+        loopCheck = loopCheck - 1
+    except:
+        loopCheck = loopCheck - 1
+    
+print("Total price:" + ": $", finalCal)
