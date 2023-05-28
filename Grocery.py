@@ -28,21 +28,29 @@ cookies $585.79
 purchase = {"bananas": 1.85, "steak": 19.99, "cookies": 4.52, "celery": 2.81, "milk": 4.34}
 
 
-itemPurchase = str(input())
-itemQuantity = int(input())
+itemPurchased = str(input())
+purchaseQuantity = int(input())
+
+itemPrice = purchase[itemPurchased]
+purchaseCal = purchase[itemPurchased]
+
 itemDiscount = 0
-itemName = itemPurchase
-purchaseCal = purchase[itemPurchase]
-purchaseCal2 = purchase[itemPurchase]
-price = purchase[itemPurchase]
+totalPurchase = 0
 
-itemPurchase = purchase[itemPurchase]
 
-if itemQuantity < 4:
-	exit
-elif itemQuantity >= 5 <= 9:
-	purchaseCal = purchaseCal2 * .5 - purchaseCal
+if purchaseQuantity <= 9:
+    totalPurchase = purchaseCal * purchaseQuantity  
+    
+elif purchaseQuantity >= 10 and purchaseQuantity <= 20:
+    itemDiscount = itemPrice * .05
+    purchaseCal = itemPrice - itemDiscount
+    totalPurchase = purchaseCal * purchaseQuantity
+    totalPurchase = round(totalPurchase,2)
+    
 else:
-	purchaseCal = purchaseCal2 * .10 - purchaseCal
-print(itemName)
-print(purchaseCal)
+    itemDiscount = itemPrice * .1
+    purchaseCal = itemPrice - itemDiscount
+    totalPurchase = purchaseCal * purchaseQuantity
+    totalPurchase = round(totalPurchase,2)
+
+print(itemPurchased,"$"+str(totalPurchase))
