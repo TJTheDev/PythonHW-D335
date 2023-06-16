@@ -32,13 +32,13 @@ tempCheck = int(input())
 if tempCheck < 33:
 	print ("Frozen")
 	print ("Watch out for ice!")
-else: tempCheck > 33 and < 80:
+else tempCheck > 33 and < 80:
 	print ("Cold")
-else: tempCheck > 80 and < 115:
+else tempCheck > 80 and < 115:
 	print ("Warm")
-else: tempCheck > 115 and < 211:
+else tempCheck > 115 and < 211:
 	print ("Hot")
-else: tempCheck < 212:
+else tempCheck < 212:
 	print ("Boiling")
 
 if tempCheck == 212:
