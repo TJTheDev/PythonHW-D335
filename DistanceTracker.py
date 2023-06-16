@@ -24,18 +24,18 @@ Distance: 197.33 miles
 
 #Employee A: 15.62 miles
 employeeA = float(input())
-employeeA = round(employeeA * 15.62,2)
+employeeA = employeeA * 15.62
 
 #Employee B: 41.85 miles
 employeeB = float(input())
-employeeB = round(employeeB * 41.85,2)
+employeeB = employeeB * 41.85
 
 #Employee C: 32.67 miles
 employeeC = float(input())
-employeeC = round(employeeC * 32.67,2)
+employeeC = employeeC * 32.67
 
 #solution accepts three integer inputs representing the number of times an employee travels to the job site
-totalDistance = employeeA + employeeB + employeeC
+totalDistance = f"{:.2}".format(employeeA + employeeB + employeeC)
 
 #solution outputs "Distance: " followed by the total value to two decimal places
 print("Distance:", totalDistance)
