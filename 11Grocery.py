@@ -25,32 +25,40 @@ cookies $585.79
 """
 
 
+# Define the dictionary of purchase items and their prices
 purchase = {"bananas": 1.85, "steak": 19.99, "cookies": 4.52, "celery": 2.81, "milk": 4.34}
 
+# Get input for the item purchased
+itemPurchased = str(input())  # Enter the name of the purchased item
 
-itemPurchased = str(input())
-purchaseQuantity = int(input())
+# Get input for the quantity of the item purchased
+purchaseQuantity = int(input())  # Enter the quantity of the purchased item
 
-itemPrice = purchase[itemPurchased]
-purchaseCal = purchase[itemPurchased]
+# Retrieve the price of the purchased item from the purchase dictionary
+itemPrice = purchase[itemPurchased]  # Get the price of the purchased item
+purchaseCal = purchase[itemPurchased]  # Variable to store the calculated price
 
-itemDiscount = 0
-totalPurchase = 0
+itemDiscount = 0  # Variable to store the discount amount
+totalPurchase = 0  # Variable to store the total purchase amount
 
-
+# Calculate the total purchase amount based on the quantity and apply discounts if applicable
 if purchaseQuantity <= 9:
-    totalPurchase = purchaseCal * purchaseQuantity  
-    
+    # No discount applied
+    totalPurchase = purchaseCal * purchaseQuantity
+
 elif purchaseQuantity >= 10 and purchaseQuantity <= 20:
+    # Apply a 5% discount for quantities between 10 and 20
     itemDiscount = itemPrice * .05
     purchaseCal = itemPrice - itemDiscount
     totalPurchase = purchaseCal * purchaseQuantity
-    totalPurchase = round(totalPurchase,2)
-    
+    totalPurchase = round(totalPurchase, 2)
+
 else:
+    # Apply a 10% discount for quantities greater than 20
     itemDiscount = itemPrice * .1
     purchaseCal = itemPrice - itemDiscount
     totalPurchase = purchaseCal * purchaseQuantity
-    totalPurchase = round(totalPurchase,2)
+    totalPurchase = round(totalPurchase, 2)
 
-print(itemPurchased,"$"+str(totalPurchase))
+# Print the purchased item and the total purchase amount
+print(itemPurchased, "$" + str(totalPurchase))
