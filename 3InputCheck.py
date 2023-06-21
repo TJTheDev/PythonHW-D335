@@ -16,8 +16,7 @@ If the input is
 then the expected output is
 Element 4: tuple
 
-"""
-
+OLD:
 various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "University"), {"apple": 1, "pear": 5}]
 
 #use built-in function type()
@@ -38,3 +37,14 @@ stringCut = type(various_data_types[userIn])
 #Sliced the string from position 0-8 at the beginning and slices the last two characters from the end
 stringCut = str(stringCut)[8:-2]
 print("Element", str(userIn) + ":", stringCut)
+
+"""
+
+# Get input for checkInt to specify the index of the element in various_data_types list
+checkInt = int(input())  # Enter the index of the element to check
+
+# Get the data type of the element at the specified index
+nameCheck = type(various_data_types[checkInt]).__name__  # Get the data type of the element
+
+# Print the element index and its data type
+print("Element", str(checkInt) + ":", nameCheck)  # Print the index and data type of the element
