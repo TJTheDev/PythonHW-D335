@@ -20,34 +20,20 @@ If the input is
 then the expected output is
 
 Distance: 197.33 miles
-
-#Employee A: 15.62 miles
-employeeA = float(input())
-employeeA = employeeA * 15.62
-
-#Employee B: 41.85 miles
-employeeB = float(input())
-employeeB = employeeB * 41.85
-
-#Employee C: 32.67 miles
-employeeC = float(input())
-employeeC = employeeC * 32.67
-
-#solution accepts three integer inputs representing the number of times an employee travels to the job site
-totalDistance = f"{:.2}".format(employeeA + employeeB + employeeC)
-
-#solution outputs "Distance: " followed by the total value to two decimal places
-print("Distance:", totalDistance)
 """
 
+# Get input values for employeeA, employeeB, and employeeC
 employeeA = float(input())
 employeeB = float(input())
 employeeC = float(input())
 
-employeeA = f"{:.2}"format(employeeA * 15.62)
-employeeB = f"{:.2}"format(employeeB * 41.85)
-employeeC = f"{:.2}"format(employeeC * 32.67)
+# Calculate the distance for each employee
+employeeA = (employeeA * 15.62)
+employeeB = (employeeB * 41.85)
+employeeC = (employeeC * 32.67)
 
-distance = employeeA + employeeB + employeeC
+# Calculate the total distance
+distance = "{:.2f}".format(employeeA + employeeB + employeeC)
 
-print ("Distance: " + "distance " + miles)
+# Prints the distance
+print("Distance: " + distance, "miles")
