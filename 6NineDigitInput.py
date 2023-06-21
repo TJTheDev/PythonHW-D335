@@ -24,5 +24,5 @@ studentNum = int(input())
 studentNum = str(studentNum)
 
 #Used the slicing function to break apart the string while concatenating the '-' digit break
-studentNum = (studentNum[0:3] + "-" + studentNum[3:5] + "-" + studentNum[5:9])
-print(studentNum)
+studentNumOut = (studentNum[0:3] + "-" + studentNum[3:5] + "-" + studentNum[5:9])
+print(studentNumOut)
