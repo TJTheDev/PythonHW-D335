@@ -29,7 +29,7 @@ while totalOunces >= poundsCal:
     totalPounds = totalPounds + 1
 
 
-#solution outputs the converted tons, pounds, and ounces represented by the input value of ounces
+#Outputs the converted tons, pounds, and ounces represented by the input value of ounces
 print("Tons:", totalTons)
 print("Pounds:", totalPounds)
 print("Ounces:", totalOunces)
