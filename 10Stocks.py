@@ -18,27 +18,30 @@ Total price: $150.53
 
 """
 
-stocks = {'TSLA': 912.86 , 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8.72, 'AURA': 22.12, 'AMZN': 141.28, 'EMBK': 12.29, 'LVLU': 2.33}
+# Define the dictionary of stocks and their prices
+stocks = {'TSLA': 912.86, 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8.72, 'AURA': 22.12, 'AMZN': 141.28, 'EMBK': 12.29, 'LVLU': 2.33}
 
-amountOfShares = int(input())
+# Get input for the number of stock selections
+amountOfShares = int(input())  # Enter the number of stock selections
+
 loopCheck = amountOfShares
-finalCal = 0.00
-sharePrice = 0.00
+finalCal = 0.00  # Variable to store the total cost of stocks
+sharePrice = 0.00  # Variable to store the price of each stock
 
+# Iterate over the stock selections
 while loopCheck > 0:
-#    stockChoice = str(input())
-#   I switched this to a try block to handle input validation better
     try:
-        stockChoice = str(input())
-        finalCal = round(finalCal + stocks[stockChoice],2) 
-#       stockChoice = "'"+stockChoice+"'"
-#       print(stockChoice)
-#       print (stocks[stockChoice])
-#       finalCal = finalCal + int(stocks[stockChoice])
-#       sharePrice = int(stocks[stockChoice])
-#       round(finalCal = finalCal + stocks[stockChoice],2)
+        # Get input for the stock choice as a string
+        stockChoice = str(input())  # Enter the stock symbol as a string
+
+        # Calculate the total cost by adding the price of the selected stock to finalCal
+        finalCal = round(finalCal + stocks[stockChoice], 2)
+
+        # Decrement the loop counter
         loopCheck = loopCheck - 1
     except:
+        # Handle the exception if an invalid stock symbol is entered
         loopCheck = loopCheck - 1
-    
-print("Total price:" + ": $", finalCal)
+
+# Print the total price of the stocks
+print("Total price: $" + str(finalCal))  # Print the total cost to 2 decimal places
