@@ -14,10 +14,12 @@ then the expected output is
 8 is 40 in human years
 """
 
-import pigAge
+import pigAge  # Import the pigAge module
 
-pigAgeInput = int(input())
+pigAgeInput = int(input())  # Get an integer input for pig age
 
+# Call the pigAge_converter function from the pigAge module to convert pig age to human years
 pigAgeConv = pigAge.pigAge_converter(pigAgeInput)
 
+# Print the original pig age and the converted age in human years using f-string formatting
 print(f"{pigAgeInput} is {pigAgeConv} in human years")
