@@ -30,16 +30,16 @@ Watch out for ice!
 tempCheck = int(input())
 
 if tempCheck < 33:
-	print ("Frozen")
-	print ("Watch out for ice!")
-elif tempCheck > 33 and < 80:
-	print ("Cold")
-elif tempCheck > 80 and < 115:
-	print ("Warm")
-elif tempCheck > 115 and < 211:
-	print ("Hot")
-elif tempCheck < 212:
-	print ("Boiling")
+    print("Frozen")
+    print("Watch out for ice!")
+elif tempCheck >= 33 and tempCheck < 80:
+    print("Cold")
+elif tempCheck >= 80 and tempCheck < 115:
+    print("Warm")
+elif tempCheck >= 115 and tempCheck < 211:
+    print("Hot")
+else:
+    print("Boiling")
 
 if tempCheck == 212:
-	print ("Caution: Hot!")
+    print("Caution: Hot!")
