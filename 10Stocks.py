@@ -26,16 +26,16 @@ amountOfShares = int(input())  # Enter the number of stock selections
 
 loopCheck = amountOfShares
 finalCal = 0.00  # Variable to store the total cost of stocks
-sharePrice = 0.00  # Variable to store the price of each stock
+# sharePrice = 0.00  # Variable to store the price of each stock
 
 # Iterate over the stock selections
 while loopCheck > 0:
     try:
         # Get input for the stock choice as a string
-        stockChoice = str(input())  # Enter the stock symbol as a string
+        stockChoice = str(input()).strip  # Enter the stock symbol as a string
 
         # Calculate the total cost by adding the price of the selected stock to finalCal
-        finalCal = round(finalCal + stocks[stockChoice], 2)
+        finalCal = finalCal + stocks[stockChoice]
 
         # Decrement the loop counter
         loopCheck = loopCheck - 1
@@ -44,4 +44,4 @@ while loopCheck > 0:
         loopCheck = loopCheck - 1
 
 # Print the total price of the stocks
-print("Total price: $" + str(finalCal))  # Print the total cost to 2 decimal places
+print("Total price: $" + str(finalCal)) 
