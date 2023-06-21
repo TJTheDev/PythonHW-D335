@@ -23,8 +23,14 @@ False
 
 import math
 
+# Get an integer input
 numIn = int(input())
+
+# Calculate the factorial of the input using the math.factorial() function
 numInFuc = math.factorial(numIn)
 
-print(numInFac)
+# Print the calculated factorial
+print(numInFuc)
+
+# Print a Boolean value indicating whether the factorial is greater than 100
 print(numInFuc > 100)
