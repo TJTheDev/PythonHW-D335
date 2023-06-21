@@ -6,14 +6,26 @@
 #solution accepts file input to insert sentence composed of file content into text file on a new line
 #solution outputs the text file contents including the new sentence
 
+# Get the filename as input
 inputA = str(input())
+
+# Create an empty list to store the output
 outPut = []
 
 with open(inputA) as file:
+    
+    # Read the contents of the file as a list of lines
     fileOutput = file.readlines()
+    
+    # Remove trailing whitespace, including newline character
     for lineOut in fileOutput:
-        print(lineOut.rstrip())
-        outPut.append(lineOut.rstrip())        
-for item in outPut:
-    print (item, end=" ")
+        line = lineOut.rstrip()
+        
+        # Print the line without trailing whitespace
+        print(line)
+        
+        # Add the line to the output list
+        outPut.append(line)
 
+# Join the lines in the output list with a space separator and print
+print(" ".join(outPut))
