@@ -31,4 +31,25 @@ totalCount = (quarterTotal + dimesTotal + nickelsTotal + penniesTotal)
 
 print(f"Amount: ${totalCount:.2f}")
 
+"""
+Driving is expensive. Write a program with a car's gas mileage (miles/gallon) and the cost of gas (dollars/gallon) as floating-point input, and output the gas cost for 20 miles, 75 miles, and 500 miles.
 
+Output each floating-point value with two digits after the decimal point, which can be achieved as follows:
+print(f'{your_value1:.2f} {your_value2:.2f} {your_value3:.2f}')
+"""
+
+milesPerGallon = float(input())
+costPerGallon = float(input())
+
+per20Miles = (costPerGallon / milesPerGallon) * 20
+
+per75Miles = (costPerGallon / milesPerGallon) * 75
+
+per500Miles = (costPerGallon / milesPerGallon) * 500
+
+
+print(f'{per20Miles:.2f} {per75Miles:.2f} {per500Miles:.2f}')
+
+"""
+
+"""
