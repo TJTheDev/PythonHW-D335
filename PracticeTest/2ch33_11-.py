@@ -185,7 +185,7 @@ then the output is:
 """
 
 def get_month_as_int(monthString):
-
+    # Convert the month string to the corresponding integer value
     if monthString == 'January':
         month_int = 1
     elif monthString == 'February':
@@ -211,12 +211,28 @@ def get_month_as_int(monthString):
     elif monthString == 'December':
         month_int = 12
     else:
+        # Return 0 if the month string is not recognized
         month_int = 0
 
     return month_int
 
+loop = True
+listSave = []
 
-user_string = input()
+while loop is True:
+    # Read input from the user
+    dateCheck = str(input()).strip().capitalize()
 
-# TODO: Read dates from input, parse the dates to find the one
-#       in the correct format, and output in m/d/yyyy format
+    # Check if the input is -1, indicating the end of input
+    if dateCheck == str(-1):
+        loop = False
+
+    # Check if the input matches the required date format
+    if "," in dateCheck and dateCheck[0:3].isalpha() and int(dateCheck[-1].isdigit()):
+        
+        # Split the input into parts using the comma and space as delimiters
+        dateSplitOG = dateCheck.split(", ")
+        dateSplit2nd = dateSplitOG[0].split(" ")
+        
+        # Output the date in the required format using string formatting
+        print(f"{get_month_as_int(dateSplit2nd[0])}/{dateSplit2nd[1]}/{dateSplitOG[1]}")
