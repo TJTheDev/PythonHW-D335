@@ -359,5 +359,37 @@ Ex: If the input of the program is:
 the output of the program is:
 
 Exception: Negative step count entered.
+
+def steps_to_miles(x):
+    if x < 0:
+        raise ValueError("Exception: Negative step count entered.")
+    else:
+        return(x / 2000)
+    
+
+if __name__ == '__main__':
+    stepCount = int(input())
+    if steps_to_miles(stepCount) > 0:
+        print(f"{steps_to_miles(stepCount):.2f}")
+    else:
+        print ('ValueError: Exception: Negative step count entered.')
+"""
+def steps_to_miles(stepCov):
+    if stepCov < 0:
+        raise ValueError("Exception: Negative step count entered.")
+    return (stepCov / 2000)
+    
+
+if __name__ == '__main__':
+    stepCount = int(input())
+    
+    try:
+        miles_walked = steps_to_miles(stepCount)
+    except ValueError:
+        print('Exception: Negative step count entered.')
+        
+    print(f"{steps_to_miles(stepCount):.2f}")
+
 """
 
+"""
