@@ -425,3 +425,25 @@ then the program outputs:
 
 No synonyms for educate begin with a.
 """
+synonyms = {}   # Define dictionary
+
+fileOpen = str(input())  # Prompt user for input file name
+dictLetter = str(input())  # Prompt user for dictionary letter
+wordSplit = ""  # Initialize an empty string for storing the split words
+noOutputCheck = True  # Flag to check if there are any output synonyms
+
+with open(fileOpen + ".txt") as file:  # Open the input file
+    for x in file:  # Iterate over each line in the file
+        if x[0] == dictLetter:  # Check if the first letter of the line matches the dictionary letter
+            synonyms = x  # If it matches, store the line as synonyms
+
+    for _ in synonyms:  # Iterate over each character in the synonyms
+        if _ != " " and _ != "\t" and _ != "\n":  # Check if the character is not a space, tab, or newline
+            wordSplit = wordSplit + _  # Append the character to wordSplit
+            noOutputCheck = False  # Set the flag to False since there is at least one output synonym
+        else:
+            print(wordSplit)  # If a space, tab, or newline is encountered, print the accumulated wordSplit
+            wordSplit = ""  # Reset wordSplit to an empty string
+
+if noOutputCheck == True:  # Check if no output synonyms were found and prints a message if true
+    print(f"No synonyms for {fileOpen} begin with {dictLetter}.")
