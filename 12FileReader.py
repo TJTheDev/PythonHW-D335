@@ -7,6 +7,7 @@
 #solution outputs the text file contents including the new sentence
 
 # Get the filename as input
+"""
 inputA = str(input())
 
 # Create an empty list to store the output
@@ -29,3 +30,19 @@ with open(inputA) as file:
 
 # Join the lines in the output list with a space separator and print
 print(" ".join(outPut))
+"""
+
+fileIn = str(input())
+rowAppend = ""
+
+with open (fileIn) as file:
+    for row in file:
+        print (row, end="")
+        #rowAppend.append(row)
+        for _ in row:
+            if _ != "\n":
+                rowAppend = rowAppend + _
+            else:
+                rowAppend = rowAppend + " "
+print()
+print (rowAppend)
