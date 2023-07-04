@@ -447,3 +447,54 @@ with open(fileOpen + ".txt") as file:  # Open the input file
 
 if noOutputCheck == True:  # Check if no output synonyms were found and prints a message if true
     print(f"No synonyms for {fileOpen} begin with {dictLetter}.")
+
+"""
+Write a program that first reads in the name of an input file and then reads the file using the csv.reader() method. The file contains a list of words separated by commas. Your program should output the words and their frequencies (the number of times each word appears in the file) without any duplicates.
+
+Ex: If the input is:
+
+input1.csv
+and the contents of input1.csv are:
+
+hello,cat,man,hey,dog,boy,Hello,man,cat,woman,dog,Cat,hey,boy
+the output is:
+
+hello 1
+cat 2
+man 2
+hey 2
+dog 2
+boy 2
+Hello 1
+woman 1
+Cat 1
+"""
+
+import csv
+
+# Initialize variables
+wordList = []    # List to store unique words
+wordCount = {}   # Dictionary to store word frequencies
+
+# Get input file name from user
+csvIn = str(input())
+
+# Open the input file
+with open(csvIn) as file:
+    # Read the file using csv.reader
+    for rows in csv.reader(file):
+        # Iterate over each column/word in the row
+        for column in rows:
+            # Check if the word is not in the wordCount dictionary
+            if column not in wordCount:
+                # If it's a new word, add it to wordCount with frequency 1
+                wordCount[column] = 1
+                # Also add the word to wordList to keep track of unique words
+                wordList.append(column)
+            else:
+                # If the word is already in wordCount, increment its frequency
+                wordCount[column] += 1
+
+# Print the unique words and their frequencies
+for word in wordList:
+    print(word, wordCount[word])
