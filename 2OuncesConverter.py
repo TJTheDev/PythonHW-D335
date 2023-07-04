@@ -9,6 +9,7 @@ Pounds: value_2
 Ounces: value_3
 """
 
+"""
 #there are 16 ounces in a pound and 2000 pounds in a ton
 poundsCal = 16
 totalPounds = 0
@@ -33,3 +34,20 @@ while totalOunces >= poundsCal:
 print("Tons:", totalTons)
 print("Pounds:", totalPounds)
 print("Ounces:", totalOunces)
+"""
+
+tonsOut = 0
+poundsOut = 0
+ounces = int(input())
+
+while ounces >= (2000 * 16):
+    tonsOut = tonsOut + 1
+    ounces = ounces - (2000 * 16)
+
+while ounces >= 16:
+    poundsOut = poundsOut + 1
+    ounces = ounces - 16
+
+print (f"Tons: {tonsOut}")
+print (f"Pounds: {poundsOut}")
+print (f"Ounces: {ounces}")
