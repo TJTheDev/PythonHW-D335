@@ -19,20 +19,19 @@ Total price: $150.53
 """
 
 # Define the dictionary of stocks and their prices
-stocks = {'TSLA': 912.86, 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8.72, 'AURA': 22.12, 'AMZN': 141.28, 'EMBK': 12.29, 'LVLU': 2.33}
+stocks = {'TSLA': 912.86 , 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8.72, 'AURA': 22.12, 'AMZN': 141.28, 'EMBK': 12.29, 'LVLU': 2.33}
 
 # Get input for the number of stock selections
 amountOfShares = int(input())  # Enter the number of stock selections
 
 loopCheck = amountOfShares
 finalCal = 0.00  # Variable to store the total cost of stocks
-# sharePrice = 0.00  # Variable to store the price of each stock
 
 # Iterate over the stock selections
 while loopCheck > 0:
     try:
         # Get input for the stock choice as a string
-        stockChoice = str(input()).strip  # Enter the stock symbol as a string
+        stockChoice = str(input()).strip()  # Enter the stock symbol as a string
 
         # Calculate the total cost by adding the price of the selected stock to finalCal
         finalCal = finalCal + stocks[stockChoice]
@@ -44,4 +43,5 @@ while loopCheck > 0:
         loopCheck = loopCheck - 1
 
 # Print the total price of the stocks
-print("Total price: $" + str(finalCal)) 
+print(f"Total price: $", end="")
+print ("{:.2f}".format(finalCal))
