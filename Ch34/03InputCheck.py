@@ -38,13 +38,16 @@ stringCut = type(various_data_types[userIn])
 stringCut = str(stringCut)[8:-2]
 print("Element", str(userIn) + ":", stringCut)
 
+OLD 2:
+print("Element", str(checkInt) + ":", nameCheck)  # Print the index and data type of the element
 """
+various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "University"), {"apple": 1, "pear": 5}]
 
 # Get input for checkInt to specify the index of the element in various_data_types list
-checkInt = int(input())  # Enter the index of the element to check
+element = int(input())  # Enter the index of the element to check
 
 # Get the data type of the element at the specified index
-nameCheck = type(various_data_types[checkInt]).__name__  # Get the data type of the element
+data_type = type(various_data_types[element]).__name__  # Get the data type of the element
 
 # Print the element index and its data type
-print("Element", str(checkInt) + ":", nameCheck)  # Print the index and data type of the element
+print(f"Element {element}: {data_type}")  # Print the index and data type of the element
