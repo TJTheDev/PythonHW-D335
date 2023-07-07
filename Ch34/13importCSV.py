@@ -19,9 +19,6 @@ input2.csv
 then the expected output is
 {d:400,e:500,f:600}
 {celery:2.81,milk:4.34,bread:5.63}
-"""
-
-
 
 import csv
 
@@ -46,3 +43,29 @@ for row in data:
  
     # Print the combined dictionary for each row
     print(combined)
+"""
+
+import csv
+
+var = []
+
+# Accept a string input representing the CSV file name
+csvName = str(input())
+
+# Read the CSV file and store the data in a list of dictionaries
+with open(csvName) as file:
+    data = [row for row in csv.reader(file)]
+    
+    for pos in data:
+        evens = []
+        odds = []
+        
+        for x in range(0, len(pos), 2):
+            evens.append(pos[x].strip())
+            
+        for x in range(1, len(pos), 2):
+            odds.append(pos[x].strip())
+            
+        combined = dict(zip(evens, odds))
+        
+        print(combined)
