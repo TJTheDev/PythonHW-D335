@@ -1,4 +1,4 @@
-#Python WGU Tarrylon Toney Ounces converter
+#Python WGU Ounces converter
 """
 Create a solution that accepts an integer input representing any number of ounces. Output the converted total number of tons, pounds, and remaining ounces based on the input ounces value. There are 16 ounces in a pound and 2,000 pounds in a ton.
 
